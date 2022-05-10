@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'speedfont';
+    src: url('./assets/ShareTechMono-Regular.ttf');
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --marked-color: #0091ff;
+    --light-color: #d6d300;
+    --marked-shadow: 0 0 .2vw var(--marked-color);
+    --light-shadow: 0 0 .2vw var(--light-color);
+    --unmarked-color: #b3b2b2;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'speedfont', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 .2vw #000;
+}
+
+.container {
+    opacity: 0;
+    position: absolute;
+    bottom: 2vh;
+    left: 45vw;
+    padding: 1vh;
+}
+
+.speed-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vel-container {
+    text-align: right;
+}
+
+.vel-type {
+    font-size: .8vw;
+}
+
+#vel-value {
+    letter-spacing: -.2vw;
+    font-size: 3.5vw;
+    font-weight: normal;
+    width: 5vw;
+}
+
+.separation {
+    width: .25vw;
+    height: 6vh;
+    background-color: var(--unmarked-color);
+    margin: 0 1vw;
+    border-radius: 1vw;
+}
+
+.right-info, .drive-features {
+    font-size: 1vw;
+}
+
+#gear-value {
+    font-size: 1.8vw;
+    color: var(--marked-color);
+    text-shadow: var(--marked-shadow);
+}
+
+.drive-features {
+    margin-top: .5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--unmarked-color);
+}
+
+.marked-icon {
+    color: var(--marked-color);
+    text-shadow: var(--marked-shadow);
+}
+.marked-icon-bright {
+    color: var(--light-color);
+    text-shadow: var(--light-shadow);
+}
+
+
+.blink {
+    animation: blink .6s linear infinite;
+}
+@keyframes blink {
+    0% {
+        color: var(--unmarked-color);
+        text-shadow: var(--unmarked-shadow);
+    }
+    50% {
+        color: var(--marked-color);
+        text-shadow: var(--marked-shadow);
+    }
+}
